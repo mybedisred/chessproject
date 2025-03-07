@@ -1,4 +1,6 @@
-
+//author: spencer gilcrest
+//date: 3/1/25
+//description: this class defines the actual piece that occupies a square. each piece has properties that allow its position to be manipulated throughout the game
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
