@@ -207,6 +207,7 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
 
     @Override
     public void mouseDragged(MouseEvent e) {
+        if (currPiece != null){
         currX = e.getX() - 24;
         currY = e.getY() - 24;
 
@@ -215,6 +216,7 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
         //makes legal move squares red
         for (Square possible : currPiece.getLegalMoves(this, fromMoveSquare)){
             possible.setBorder(BorderFactory.createLineBorder(Color.red, 2));
+        }
         }
     }
 
