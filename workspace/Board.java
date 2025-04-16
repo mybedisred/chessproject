@@ -285,6 +285,11 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
                 if (currSquare.getOccupyingPiece() instanceof King && currSquare.getOccupyingPiece().getColor() == kingColor){
                  kingSquare = currSquare;
                 }
+                }
+            }
+        for (int row = 0; row<8; row++){
+            for (int col = 0; col < 8; col++){
+                Square currSquare = b[row][col];
                 if (currSquare.getOccupyingPiece() != null && currSquare.getOccupyingPiece().getColor() != kingColor){
                     allControlledSquares = currSquare.getOccupyingPiece().getControlledSquares(b, currSquare);
                     for (Square check : allControlledSquares){
@@ -293,11 +298,14 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
                             return answer;
                         }
                     }
-                }
+                
             }
         }
-        return answer;
+        
+        
     }
+    return answer;
+}
     
                 
     
